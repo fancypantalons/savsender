@@ -1,0 +1,13 @@
+Simplistic EEPROM backup tool.  It beams the contents of the EEPROM from a
+game card to a specified server and IP address.
+
+In order to use, patch with the appropriate DLDI driver, install the
+application, and create a config file in /data/settings/savsender.conf.  This
+file must contain two lines, as follows:
+
+<server_name>
+<server_port>
+
+The app will then send a raw byte stream to that server and port that
+represents the contents of the EEPROM.  Use a tool like netcat to read the
+data and dump it to a file.
